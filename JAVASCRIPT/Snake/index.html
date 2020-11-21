@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>!!! JOGO DA COBRINHA !!!</title>
+  </head>
+
+  <body>
+    <div class="info">
+      <div class="scores">
+        <div class="score">
+          Pontos<br />
+          <span class="score-number">0</span>
+        </div>
+        <div class="score">
+          Alta pontuação<br />
+          <span class="high-score-number">0</span>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btn-start">
+          <span class="material-icons icon-play_arrow">play_arrow</span>
+        </button>
+        <button class="btn-pause" disabled>
+          <span class="material-icons icon-pause">pause</span>
+        </button>
+        <button class="btn-newGame material-icons icon-replay">replay</button>
+        <button class="btn-bgm">
+          <span class="material-icons icon-music_note">music_note</span>
+          <span class="material-icons icon-music_off hidden">music_off</span>
+        </button>
+        <button class="btn-audio">
+          <span class="material-icons icon-audio-on">volume_up</span>
+          <span class="material-icons icon-audio-off hidden">volume_off</span>
+        </button>
+      </div>
+    </div>
+    <div class="game-board">
+      <div class="board"></div>
+      <div id="game-over">
+        Game over!
+        <p class="restart-msg">Aperte a tecla R para recomeçar!</p>
+      </div>
+    </div>
+    <div>
+      <audio id="player" autoplay loop hidden>
+        <source
+          src="./assets/sounds/amazing-plan-by-kevin-macleod-from-filmmusic-io.mp3"
+          type="audio/mpeg"
+        />
+        Audio não suportado!.
+      </audio>
+    </div>
+    <div class="hard">
+      <span class="hard-span">Inverta o modo!:</span>
+      <div class="slider-box">
+        <input type="checkbox" id="switch__checkbox" />
+        <label class="switch" for="switch__checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <p class="desc">Controles agora estão invertidos!</p>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
